@@ -1,0 +1,10 @@
+<div class="filter-container" [class.open]="active">
+      <label class="filter-item" *ngFor="let category of categoriesData;let i = index">
+        <input type="checkbox" [(ngModel)]="selectedFilter[i].checked" />
+        {{ categoriesData[i].value }}
+        
+        <span class="checkmark"></span>
+      </label>
+      <button (click)="filterItems()">Filter</button>
+  </div>
+  

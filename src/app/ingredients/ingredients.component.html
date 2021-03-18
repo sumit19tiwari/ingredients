@@ -1,0 +1,16 @@
+<div class="content-container" *ngIf="initialValue">
+  <div *ngFor="let c of currentCategoryList">
+    <div class="content-category-header">
+      <h2>{{ c.category }}</h2>
+      <hr />
+    </div>
+    <div class="content-category-item">
+      <div class="item-card" *ngFor="let drink of c.drinks">
+        <img [src]="drink.thumbnail" [alt]="drink.name" />
+        <div class="card-title">
+          <h3>{{ drink.name }}</h3>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
