@@ -23,7 +23,6 @@ export class IngredientsComponent implements OnInit {
   ngOnInit(): void {
     this.cocktailsSub = this.cocktailService.getSelectedCocktails().subscribe((result: any ) => {
         this.cocktails = result;
-        console.log(result);
         //this.currentCategoryList = result;
         this.getCocktails();
       });
